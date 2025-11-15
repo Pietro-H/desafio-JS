@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lampada JavaScript</title>
+    <title>Sistema de germinação</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Acender e Apagar a luz</h1>
-    
-    <center><img id="lampada" src="off.png" alt="Uma lampada apagada" width="750"></center>
-    <br>
-    <button onclick="acender()">acender</button>
-    <button onclick="apagar()">apagar</button>
-<script src="script.js"></script>    
+        <h1>Sistema de germinação</h1>
+    <div id="germinação">
+        <div id="semente" class="pnt"> </div>
+        <div id="plantinha"  class="pnt"> </div>
+        <div id="planta"    class="pnt"> </div>
+ 
+    </div>
+
+    <img id="pntsemente" src="img1.jpeg" src="img2.jpeg" src="img3.jpeg"  alt="semente" width="500">
+
+
+
+    <div id="botoes">
+        <button id="btnsemente">  semente </button>
+        <button id="btnplantinha">   plantinha   </button>
+        <button id="btnplanta">     planta     </button>
+        <button id="btnAutomático">Automático</button>
+        <button id="btnParar">     Parar     </button>
+    </div>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>

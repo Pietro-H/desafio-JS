@@ -1,16 +1,43 @@
 body{
     text-align: center;
-    font-family: Arial;
-    background-color: rgb(101, 4, 211);
-    color:rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    background-color: rgb(126, 66, 28);
+}
+h1{
+    margin-bottom: 20px;
+}
+#germinar{
+    width: 150px;
+    background-color: #222;
+    padding: 50px;
+    margin: 0 auto 200px auto;
+    border-radius: 20px;
+}
+.luz{
+    width: 120px;
+    height: 120px;
+    margin: 35px auto;
+    border-radius: 50%;
+    background-color: #444;
+    transition: background-color 0.3s;
+}
+#botoes button{
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 25px;
+}
 
-}
-img{
-    border-radius: 10px;
-    transition: 0.3s;
-}
-button{
-    margin: 10px;
-    padding: 10px 50px;
-    font-size: 20px;
-}
+#btnsemente{background-color: green;}
+#btnplantinha{background-color: green;}
+#btnplanta{background-color: green;}
+#btnAutomático{background-color: gray;}
+#btnParar{background-color: rgba(255, 0, 0, 0.548);}
+
+
+
+.germinar.semente{background-color: red;}
+.germinar.plantinha{background-color: yellow;}
+.germinar.planta{background-color: green;}

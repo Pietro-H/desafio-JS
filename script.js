@@ -1,44 +1,36 @@
-const pntsemente = document.getElementById("semente");
-const pntplantinha = document.getElementById("plantinha");
-const pntplanta = document.getElementById("planta");
+const germinacao = document.getElementById("germinacao")
 
-pntsemente.addEventListener("mouseover",crescersemente);
-pntplantinha.addEventListener("mouseover",crescerplantinha);
-pntplanta.addEventListener("mouseout",crescerplanta);
 
-const btnsemente = document.getElementById("btnsemente")
-const btnplantinha = document.getElementById("btnplantinha")
-const btnplanta = document.getElementById("btnplanta")
-const btnAuto = document.getElementById("btnAuto")
-const btnParar = document.getElementById("btnParar")
-
-let intervalo;
-
-function limpar(){
-    pntsemente.className = 'pnt';
-    pntplantinha.className = 'pnt';
-    pntplanta.className = 'pnt';
+function semente(){
+    germinacao.scr = "img1.jpeg"
+    document.body.style.background = "rgba(59, 148, 37, 0.66)"
+        console.log("img1");
 }
 
-function crescersemente(){
-    pntsemente.src = "img1.jpeg";
+function plantinha(){
+    germinacao.src = "img2.jpeg"
+    document.body.style.background = "rgba(59, 148, 37, 0.66)"
+        console.log("img2");
 }
-function crescerplantinha(){
-    pntplantinha.src ="img2.jpeg";
+function planta(){
+    germinacao.src = "img3.jpeg"
+    document.body.style.background = "rgba(59, 148, 37, 0.66)"
+        console.log("img3");
 }
-function crescerplanta(){
-    pntplanta.src ="img3.jpeg";
+function plantaadulta(){
+    germinacao.src = "img4.png"
+    document.body.style.background = "rgba(59, 148, 37, 0.66)"
+        console.log("img4");
 }
 
-function modoAutomatico(){
-    limpar();
+function automatico(){
     let estado =0;
     intervalo = setInterval(()=>{
-        if(estado === 0 ) crescersemente();
-        else if (estado === 1) crescerplantinha();
-        else if (estado === 2) crescerplanta();
-        estado = (estado + 1) % 3;
-    }, 1000)
+        if(estado === 0) plantinha();
+        if(estado === 2) planta();
+        else if(estado === 1) plantaadulta();
+        estado = (estado + 2) % 3;
+    }, 450)
 }
 
 function parar(){
@@ -46,5 +38,9 @@ function parar(){
     limpar();
 }
 
-btnParar.onclick = parar;
-btnAuto.onclick = modoAutomatico;
+btnsemente.onclick = semente;
+btnplantinha.onclick = plantinha;
+btnplanta.onclick = planta;
+btnplantaadulta.onclick = plantaadulta;
+btnautomatico.onclick = automatico;
+btnparar.onclick = parar;
